@@ -2,89 +2,92 @@
 <html>
     <head>
         <title>KCBNKV</title>
-            <link rel="icon" href="logo.JPG" type="image/jpg">
+        <link rel="icon" href="logo.JPG" type="image/jpg">
     </head>
-        <body>
-            <div align="center">
-                <form>
-                    <label>USER REGISTRATION</label>
-                        <table>
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <input type="text" placeholder="First Name">
-                                    </td>
-                                    <td>
-                                        <input type="text" placeholder="Surname">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input type="password" placeholder="Password">
-                                    </td>
-                                    <td>
-                                        <input type="password" placeholder="Confirm Password">
-                                    </td>
-                                </tr>
-                                <tr style="text-align: left;">
-                                    <td>
-                                        <input type="radio" name="g" value="Female">
-                                        <label for="female">Female</label>
-                                    </td>
-                                    <td>
-                                        <input type="radio" name="g" value="Male">
-                                        <label for="Male">Male</label>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Select Course</td>
-                                    <td>
-                                        <input type="checkbox" name="ch1">
-                                        <label for="ch1">Web Dev</label>
-                                    
-                                        <input type="checkbox" name="ch2">
-                                        <label for="ch2">Python</label>
 
-                                        <input type="checkbox" name="ch3">
-                                        <label for="ch2">SQL</label>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Choose Certificate</td>
-                                    <td>
-                                        <select>
-                                            <option value="OCJP">OCJP</option>
-                                            <option value="OCJP">AI</option>
-                                            <option value="OCJP">AWS</option>
-                                            <option value="OCJP">FSD</option>
-                                        </select>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Choose City</td>
-                                    <td> <input list="city">
-                                    <datalist id="city">
-                                        <option value="Birmingham">
-                                        <option value="Liverpool">
-                                        <option value="Coventry">
-                                        <option value="Mancheser">
-                                    </datalist>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td colspam="2">
-                                    <input type="submit" value="Register">
-                                    </td> 
-                                </tr>
-                                <tr>
-                                    <td>Already Registered</td>
-                                    <td>
-                                        <a href="login.html" target="1">Click Here</a>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                </form>
-            </div>
-        </body>
+    <body>
+        <div align="center">
+            <form action=:"/practice.html" method="post">
+                <header>
+                    <label class="center">USER REGISTRATION</label>
+                </header>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <input id="fname" name="fname" type="text" placeholder="First Name" required pattern="[a-zA-Z]+">
+                            </td>
+                            <td>
+                                <input id="sname" name="sname" type="text" placeholder="Surname" required pattern="[a-zA-Z]+">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input id="pw" name="pw" type="password" placeholder="Password" required minlength="8" maxlength="15" pattern="[a-zA-Z0-9]+">
+                            </td>
+                            <td>
+                                <input id="con-pw" name="con-pw" type="password" placeholder="Confirm Password" required minlength="8" maxlength="15" pattern="[a-zA-Z0-9]+">
+                            </td>
+                        </tr>
+                        <tr style="text-align: left;">
+                            <td>
+                                <input type="radio" name="gender" value="female">
+                                <label for="female">Female</label>
+                            </td>
+                            <td>
+                                <input type="radio" name="gender" value="male">
+                                <label for="Male">Male</label>
+                            </td>
+                            <td>
+                                <input type="radio" name="gender" value="non-Binary">
+                                <label for="Non Binary">Non Binary</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Select Course</td>
+                            <td>
+                                <input type="checkbox" name="course" value="web-dev">Web Dev<br>
+                                <input type="checkbox" name="course" value="python">Python<br>
+                                <input type="checkbox" name="course" value="sql">SQL<br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Choose Certificate</td>
+                            <td>
+                                <select name="certificate-choice">
+                                    <option value="ocjp">OCJP</option>
+                                    <option value="ai">AI</option>
+                                    <option value="aws">AWS</option>
+                                    <option value="fsd">FSD</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Choose City</td>
+                            <td> 
+                            <input list="city">
+                            <datalist id="city">
+                                <option value="Birmingham"/>
+                                <option value="Liverpool">
+                                <option value="Coventry">
+                                <option value="Mancheser">
+                            </datalist>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspam="2">
+                            <input type="submit" value="Register">
+                            </td> 
+                        </tr>
+                        <tr>
+                            <td>Already Registered</td>
+                            <td>
+                                <a href="login.html" target="1">Click Here</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </body>
 </html>
