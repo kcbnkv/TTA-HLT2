@@ -12,13 +12,14 @@
                     <tbody>
                         <tr>
                             <td>
-                                <input type="text" placeholder="User Name">
+                                <input id="user-name" name="user-name" type="text" placeholder="User Name" required pattern="[a-zA-Z]+">
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <input type="password" placeholder="Password">
-                            </td>   
+                                <input id="pw" name="pw" type="password" placeholder="Password" required minlength="8" maxlength="15" pattern="[a-zA-Z0-9]+">
+                            </td>
+                                
                         </tr>
                         <tr>
                             <td>
